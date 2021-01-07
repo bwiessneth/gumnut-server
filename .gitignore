@@ -1,0 +1,34 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Assembler output dir
+asm_output
+gumnut_assembler_output
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Sphinx documentation
+docs/_build/
+
+# IDE
+.vscode/
