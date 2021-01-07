@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 @click.version_option(prog_name="gumnut-server", version=__version__)
 @click.group()
 def server():
-    """Server command group
+    """Provide an interface for gumnut-simulator
     \f
     Provides the entry point for CLI usage"""
 
