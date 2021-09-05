@@ -64,4 +64,7 @@ def websocket(host, port):
         logging.error("Unhandled exception:")
         logging.error(e, exc_info=True)
         logger.critical("There was an unhandled exception. Stopping now!")
-        sys.exit(1)
+
+
+if __name__ == '__main__':
+    server()
