@@ -1,5 +1,4 @@
 from gumnut_server import __version__
-import sys
 import click
 import logging
 from logging.handlers import RotatingFileHandler
