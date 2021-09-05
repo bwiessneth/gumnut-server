@@ -51,6 +51,7 @@ def update():
 @socketio.on("reset", namespace="/simulator")
 def reset():
     """Resets the simulator state"""
+    logger.debug("socketio.onReset")
     simulator = get_simulator()
     simulator.reset()
     update()
@@ -70,6 +71,7 @@ def setup(message):
 
     :type message: str
     """
+    logger.debug("socketio.onSetup")
     simulator = get_simulator()
     simulator.reset()
     simulator.setup(message["source"])
@@ -79,6 +81,7 @@ def setup(message):
 @socketio.on("step", namespace="/simulator")
 def step():
     """Trigger on step of the simulator and return simulator state"""
+    logger.debug("socketio.onStep")
     simulator = get_simulator()
     simulator.step()
     update()
@@ -99,6 +102,7 @@ def IO_input(message):
 
     :type message: str
     """
+    logger.debug("socketio.onSetIO")
     simulator = get_simulator()
     simulator.set_IO_controller_register(message["io_addr_inp"], message["io_reg_value"])
 
