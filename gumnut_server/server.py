@@ -1,9 +1,11 @@
-from gumnut_server import __version__
-import click
 import logging
-from logging.handlers import RotatingFileHandler
 import tempfile
+from logging.handlers import RotatingFileHandler
 from pathlib import Path
+
+import click
+
+from gumnut_server import __version__
 
 logger = logging.getLogger(__name__)
 

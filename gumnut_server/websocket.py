@@ -1,11 +1,11 @@
+import logging
 import os
 import tempfile
-from flask import Flask, session
-from flask_socketio import SocketIO, emit
-from flask_session import Session
-from gumnut_simulator.simulator import GumnutSimulator
 
-import logging
+from flask import Flask, session
+from flask_session import Session
+from flask_socketio import SocketIO, emit
+from gumnut_simulator.simulator import GumnutSimulator
 
 logger = logging.getLogger(__name__)
 

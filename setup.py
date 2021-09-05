@@ -1,6 +1,7 @@
-import setuptools
 import codecs
 import os.path
+
+import setuptools
 
 
 # Taken from pip itself (https://github.com/pypa/pip/blob/master/setup.py#L11)
