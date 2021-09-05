@@ -65,5 +65,5 @@ def websocket(host, port):
         logger.critical("There was an unhandled exception. Stopping now!")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     server()
