@@ -109,10 +109,10 @@ def ping_pong():
     emit("pong")
 
 
-def stop(signum, _frame):
+@socketio.on("stop", namespace="/simulator")
+def onStop():
     """Stop websocket interface"""
-    logger.info("Stopping websocket")
-    logger.debug("Reason for stopping: %s (%s)", signal.Signals(signum).name, signum)  # pylint: disable=no-member
+    logger.debug("socketio.onStop")
     socketio.stop()
 
 
@@ -126,6 +126,4 @@ def run(host="127.0.0.1", port=5000):
     """
     logger.info("Starting websocket on %s:%s", host, port)
 
-    signal.signal(signal.SIGTERM, stop)
-    signal.signal(signal.SIGINT, stop)  # CTRL C
     socketio.run(app, host=host, port=port)
