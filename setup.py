@@ -39,7 +39,7 @@ setuptools.setup(
     ],
     python_requires=">=3.6",
     entry_points={"console_scripts": ["gumnut-server = gumnut_server.server:server"]},
-    install_requires=["gumnut-assembler", "gumnut-simulator", "flask", "flask_session", "flask_socketio"],
+    install_requires=["gumnut-assembler", "gumnut-simulator", "flask", "flask_session", "flask_socketio", "pathlib"],
     extras_require={
         "dev": [
             "tox",
