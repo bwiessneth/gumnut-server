@@ -103,9 +103,10 @@ def IO_input(message):
     simulator.set_IO_controller_register(message["io_addr_inp"], message["io_reg_value"])
 
 
-@socketio.on("ping", namespace="/server")
-def ping_pong():
+@socketio.on("ping", namespace="/simulator")
+def onPing():
     """Ping/Pong event handler"""
+    logger.debug("socketio.onPing")
     emit("pong")
 
 
