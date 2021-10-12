@@ -63,13 +63,13 @@ html_theme_options = {"display_version": False, "navigation_depth": 2, "collapse
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 html_last_updated_fmt = "%b %d, %Y"
 html_context = {
-    "css_files": [],
     "display_github": True,
     "github_user": "bwiessneth",
     "github_repo": "gumnut-server",
     "github_version": "master",
     "conf_py_path": "/docs/",
 }
+html_css_files = []
 html_show_copyright = False
 
 
